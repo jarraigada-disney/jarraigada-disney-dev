@@ -20,6 +20,7 @@ class Restaurant extends StatelessWidget{
         body: SafeArea(
           child: Column(
             children: [
+<<<<<<< HEAD
               SizedBox(
                 height: screenSize.height*0.3,
                 child: Container(
@@ -31,6 +32,9 @@ class Restaurant extends StatelessWidget{
                   ),
                 ),
               ),
+=======
+              _RestaurantCoverImage(screenSize: screenSize),
+>>>>>>> bb3d68a (Widgets extracted)
               _RestaurantInfo(name: name),
               _ArrivallWindows()
             ],
@@ -40,6 +44,34 @@ class Restaurant extends StatelessWidget{
     );
   }
 }
+<<<<<<< HEAD
+=======
+
+class _RestaurantCoverImage extends StatelessWidget {
+  const _RestaurantCoverImage({
+    super.key,
+    required this.screenSize,
+  });
+
+  final Size screenSize;
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      height: screenSize.height*0.3,
+      child: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('assets/images/sunshine-tree-terrace-01-new.jpg'), 
+            fit: BoxFit.cover,
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+>>>>>>> bb3d68a (Widgets extracted)
 class _ArrivallWindows extends StatelessWidget {
   const _ArrivallWindows();
   @override
